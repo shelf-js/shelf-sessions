@@ -1,0 +1,24 @@
+{
+  "name": "redis-models",
+  "version": "0.1.0",
+  "description": "A simple tool for defining model classes that can get persisted in Redis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jgantunes/redis-models"
+  },
+  "keywords": [
+    "redis",
+    "model",
+    "class"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jgantunes/redis-models/issues"
+  },
+  "homepage": "https://github.com/jgantunes/redis-models"
+}
