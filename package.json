@@ -10,8 +10,7 @@
     "lint": "standard --verbose | snazzy"
   },
   "pre-commit": [
-    "lint",
-    "test"
+    "lint"
   ],
   "repository": {
     "type": "git",
