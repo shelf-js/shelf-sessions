@@ -4,21 +4,42 @@
   "description": "A simple tool for defining model classes that can get persisted in Redis",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "babel-node": "babel-node --stage 0",
+    "start": "npm run babel-node -- index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "standard --verbose | snazzy"
   },
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/jgantunes/redis-models"
+    "url": "https://github.com/ricardofbarros/redis-models"
   },
   "keywords": [
     "redis",
     "model",
     "class"
   ],
-  "author": "",
+  "author": {
+    "name": "Ricardo Barros",
+    "email": "ricardofbarros@hotmail.com"
+  },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jgantunes/redis-models/issues"
+    "url": "https://github.com/ricardofbarros/redis-models/issues"
   },
-  "homepage": "https://github.com/jgantunes/redis-models"
+  "homepage": "https://github.com/ricardofbarros/redis-models",
+  "devDependencies": {
+    "pre-commit": "^1.1.1",
+    "snazzy": "^1.0.3",
+    "standard": "^5.0.0"
+  },
+  "dependencies": {
+    "babel": "^5.8.20",
+    "callsite": "^1.0.0",
+    "chalk": "^1.1.0",
+    "redis": "^0.12.1"
+  }
 }
