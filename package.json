@@ -7,7 +7,8 @@
     "compile": "babel --ignore node_modules,dist -d dist/ --stage 0 .",
     "start": "npm run compile && node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "standard --verbose --ignore dist/ | snazzy"
+    "lint": "standard --verbose --ignore dist/ | snazzy",
+    "prepublish": "npm run compile"
   },
   "pre-commit": [
     "lint"
