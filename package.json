@@ -1,44 +1,43 @@
 {
-  "name": "redis-models",
+  "name": "shelf-sessions",
   "version": "0.1.0",
-  "description": "A simple tool for defining model classes that can get persisted in Redis",
-  "main": "index.js",
+  "description": "A simple tool for defining user session model classes in redis using shelf",
+  "main": "dist/index.js",
   "scripts": {
-    "babel-node": "babel-node --stage 0",
-    "start": "npm run babel-node -- index.js",
+    "compile": "babel --ignore node_modules,dist -d dist/ --stage 0 .",
+    "start": "npm run compile && node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "standard --verbose | snazzy"
+    "lint": "standard --verbose --ignore dist/ | snazzy"
   },
   "pre-commit": [
     "lint"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ricardofbarros/redis-models"
+    "url": "https://github.com/jgantunes/shelf-sessions"
   },
   "keywords": [
     "redis",
     "model",
-    "class"
+    "session",
+    "user"
   ],
   "author": {
-    "name": "Ricardo Barros",
-    "email": "ricardofbarros@hotmail.com"
+    "name": "João Antunes",
+    "email": "j.goncalo.antunes@gmail.com"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ricardofbarros/redis-models/issues"
+    "url": "https://github.com/jgantunes/shelf-sessions/issues"
   },
-  "homepage": "https://github.com/ricardofbarros/redis-models",
+  "homepage": "https://github.com/jgantunes/shelf-sessions",
   "devDependencies": {
+    "babel": "^5.8.20",
     "pre-commit": "^1.1.1",
     "snazzy": "^1.0.3",
     "standard": "^5.0.0"
   },
   "dependencies": {
-    "babel": "^5.8.20",
-    "callsite": "^1.0.0",
-    "chalk": "^1.1.0",
-    "redis": "^0.12.1"
+    "shelf": "git://github.com/jgantunes/shelf.git"
   }
 }

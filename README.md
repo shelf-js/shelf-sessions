@@ -1,2 +1,2 @@
-# redis-models
-A simple tool for defining model classes that can get persisted in Redis
+# shelf-sessions
+A simple tool for defining user session model classes in redis using shelf
