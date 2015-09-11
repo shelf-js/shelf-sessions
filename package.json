@@ -1,7 +1,7 @@
 {
-  "name": "shelf-sessions",
+  "name": "shelf-jwt-sessions",
   "version": "0.1.0",
-  "description": "A simple tool for defining user session model classes in redis using shelf",
+  "description": "A simple tool for defining user session model classes in redis using shelf and jwt",
   "main": "dist/index.js",
   "scripts": {
     "compile": "babel --ignore node_modules,dist -d dist/ --stage 0 .",
@@ -29,9 +29,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jgantunes/shelf-sessions/issues"
+    "url": "https://github.com/jgantunes/shelf-jwt-sessions/issues"
   },
-  "homepage": "https://github.com/jgantunes/shelf-sessions",
+  "homepage": "https://github.com/jgantunes/shelf-jwt-sessions",
   "devDependencies": {
     "babel": "^5.8.20",
     "pre-commit": "^1.1.1",
@@ -39,6 +39,7 @@
     "standard": "^5.0.0"
   },
   "dependencies": {
-    "shelf": "git://github.com/jgantunes/shelf.git"
+    "shelf": "git://github.com/jgantunes/shelf.git",
+    "xtend": "^4.0.0"
   }
 }
