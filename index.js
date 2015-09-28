@@ -1,1 +1,3 @@
-import './lib'
+import ShelfSessions from './lib'
+
+export default ShelfSessions
