@@ -1,3 +1,5 @@
-import ShelfSessions from './lib'
+'use strict'
 
-export default ShelfSessions
+const ShelfSessions = require('./lib')
+
+module.exports = ShelfSessions

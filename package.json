@@ -2,16 +2,15 @@
   "name": "shelf-jwt-sessions",
   "version": "0.1.0",
   "description": "A simple tool for defining user session model classes in redis using shelf and jwt",
-  "main": "dist/index.js",
+  "main": "index.js",
   "scripts": {
-    "compile": "babel --ignore node_modules,dist -d dist/ --stage 0 .",
-    "start": "npm run compile && node dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "standard --verbose --ignore dist/ | snazzy",
-    "prepublish": "npm run compile"
+    "test": "./node_modules/lab/bin/lab --verbose",
+    "test-cov": "./node_modules/lab/bin/lab --verbose -c",
+    "lint": "standard --verbose | snazzy"
   },
   "pre-commit": [
-    "lint"
+    "lint",
+    "test"
   ],
   "repository": {
     "type": "git",
@@ -21,27 +20,50 @@
     "redis",
     "model",
     "session",
-    "user"
+    "jwt",
+    "user",
+    "odm",
+    "object",
+    "document",
+    "mapper",
+    "storage",
+    "fast"
   ],
-  "author": {
-    "name": "João Antunes",
-    "email": "j.goncalo.antunes@gmail.com"
-  },
+  "author": [
+    {
+      "name": "Ricardo Barros",
+      "email": "ricardofbarros@hotmail.com"
+    },
+    {
+      "name": "João Antunes",
+      "email": "j.goncalo.antunes@gmail.com"
+    },
+    {
+      "name": "Pedro Carvalho",
+      "email": "pedromatosdecarvalho@gmail.com"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jgantunes/shelf-jwt-sessions/issues"
   },
   "homepage": "https://github.com/jgantunes/shelf-jwt-sessions",
+  "engines": {
+    "node": ">=4.0.0"
+  },
   "devDependencies": {
-    "babel": "^5.8.20",
-    "pre-commit": "^1.1.1",
-    "snazzy": "^1.0.3",
-    "standard": "^5.0.0"
+    "code": "^2.1.0",
+    "lab": "^10.2.0",
+    "lodash.assign": "^4.0.6",
+    "pre-commit": "^1.1.2",
+    "proxyquire": "^1.7.4",
+    "snazzy": "^3.0.0",
+    "standard": "^6.0.8"
   },
   "dependencies": {
     "async": "^1.4.2",
+    "joi": "^8.0.4",
     "jsonwebtoken": "^5.0.5",
-    "shelf": "git://github.com/jgantunes/shelf.git",
-    "xtend": "^4.0.0"
+    "shelf": "^2.0.0"
   }
 }

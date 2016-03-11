@@ -1,17 +1,29 @@
-import ShelfSessions from './index'
-import crypto from 'crypto'
+'use strict'
 
-let secret = crypto.randomBytes(128)
+const ShelfSessions = require('./index')
+const Crypto = require('crypto')
+const Joi = require('joi')
 
-let MyShelf = new ShelfSessions('test', {
-  secret,
+const secret = Crypto.randomBytes(128)
+
+let MyShelf = ShelfSessions('test', secret, {
   algorithm: 'HS256',
   subject: 'yolo',
   issuer: 'me'
 })
 
-let MyModel = MyShelf.extend()
+let MyModel = MyShelf.extend({
+  name: 'basic-user',
+  props: {
+    userAgent: Joi.string()
+  }
+})
 
-MyModel.getSession('me', 'user', {userAgent: 'this-some-special-header'}, () => {
-  console.log(arguments)
+MyModel.createSession({
+  userId: 'me',
+  scopes: ['default'],
+  userAgent: 'stuff from the header'
+}, (err, result) => {
+  if (err) throw err
+  MyModel.authenticate(result.jwt, console.log)
 })
