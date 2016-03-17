@@ -5,7 +5,7 @@
 Define user session model classes with ttl in redis using [jwt](https://github.com/auth0/node-jsonwebtoken) and [shelf](https://github.com/shelf-js/shelf).
 
 [![Build Status](https://travis-ci.org/shelf-js/shelf-sessions.svg?branch=master)](https://travis-ci.org/shelf-js/shelf-sessions)
-[![npm version](https://img.shields.io/npm/v/shelf-sessions.svg)](https://www.npmjs.com/package/shelf-sessions)
+[![npm version](https://img.shields.io/npm/v/shelf-jwt-sessions.svg)](https://www.npmjs.com/package/shelf-jwt-sessions)
 
 # Introduction
 
