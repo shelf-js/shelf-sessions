@@ -16,7 +16,7 @@ Shelf sessions uses [joi](https://github.com/hapijs/joi) for schema validation a
 # Example
 
 ```javascript
-const ShelfSessions = require('shelf-sessions')
+const ShelfSessions = require('shelf-jwt-sessions')
 const Crypto = require('crypto')
 const Joi = require('joi')
 
